@@ -7,6 +7,6 @@ class Trip {
       this.season = season
       this.rating = rating
       this.user_id = user_id
-      this.renderTrip()
+    //  this.renderTrip()
     }
 }
