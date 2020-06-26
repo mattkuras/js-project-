@@ -13,7 +13,7 @@ user_list = [
     ["Lou", "12345"],
     ["Shamar", "12345"],
     ["Sarah", "12345"],
-    ["Bryan", "12345"],
+    ["Bryan", "12345"]
 ]
 
 user_list.each do |name, password|
@@ -43,9 +43,9 @@ trip_descriptions = [
 
 
 trip_list = [
-    ["Surf Island Beach State Park", "img_url", trip_descriptions[0], "All Seasons", " 4 Stars", 1 ],
-    ["Hike High Point State Park", "img_url", trip_descriptions[1], "spring, summer, fall" "5 Stars", 2],
-    ["Kayak Double Trouble State Park", "img_url", trip_descriptions[2], "spring, summer" "3 Stars", 3],
+    ["Surf Island Beach State Park", "img_url", trip_descriptions[0], "All Seasons", "4 Stars", 1 ],
+    ["Hike High Point State Park", "img_url", trip_descriptions[1], "spring, summer, fall", "5 Stars", 2],
+    ["Kayak Double Trouble State Park", "img_url", trip_descriptions[2], "spring, summer", "3 Stars", 3],
     ["Camp at Wawayanda State Park", "img_url", trip_descriptions[3], "summer", "5 Stars", 4],
     ["Fish the Jersey Shore", "img_url", trip_descriptions[4], "spring, summer, fall", "3 Stars", 5],
     ["Mountain Bike Allaire State Park", "img_url", trip_descriptions[5], "summer, spring, fall", "3 Stars", 6],
