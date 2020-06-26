@@ -10,6 +10,17 @@ class Trip {
       this.renderTrip()
     }
 
+    tripHTML(){
+        return `
+          <a href="/trips/${this.id}"><h2 class="header">${this.name}</h2></a>
+          <img src="${this.photos}" width="100" />
+          <p>season: ${this.season}</p>
+          <p>rating: ${this.rating}</p>
+          <p>description: ${this.description} </p>
+          <p>created by: ${this.user_id}></p>
+          <button class="delete">DELETE ME???</button>
+        `
+      }
 
 
  // render all our hogs to the page
@@ -33,7 +44,7 @@ class Trip {
     const cardBody = document.createElement('div')
     cardBody.classList.add('card-body')
     tripCard.appendChild(cardBody)
-//    cardBody.innerHTML += this.tripHTML()
+    cardBody.innerHTML += this.tripHTML()
     const span = document.createElement('span')
     span.classList.add('tag')
     span.classList.add('tag-pink')
