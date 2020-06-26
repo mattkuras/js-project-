@@ -41,15 +41,26 @@ trip_descriptions = [
         ["This is a wonderful waterside run in Hoboken, with great views of the Hudson River and the Manhattan skyline. This former industrial port has transformed in recent years, with the Hudson River Waterfront Walkway connecting several green spaces, and hip bars, restaurants, and shops lining Frank Sinatra Drive and Washington St."]
 ]
 
+# trip_photos = [
+#     "https://media.nj.com/njv_paul_mulshine/photo/bay-headjpg-55c1953bc0cf707c_large.jpg",
+#     "https://media-cdn.tripadvisor.com/media/photo-s/10/71/fb/59/high-point-state-park.jpg",
+#     "https://i.pinimg.com/originals/60/15/d4/6015d4033f6f0f5f069009ee9aabcd16.jpg",
+#     "https://njmonthly.com/wp-content/uploads/cache/2017/04/DSCF2533-e1493329042770/709544912.jpg",
+#     "https://www.onthewater.com/wp-content/uploads/2016/11/peter-bertram-big-fall-bass.jpg",
+#     "https://ep1.pinkbike.org/p4pb10416265/p4pb10416265.jpg",
+#     "https://cdn.theculturetrip.com/wp-content/uploads/2018/03/waterfront-runners.jpg"
+# ]
+
+
 
 trip_list = [
-    ["Surf Island Beach State Park", "img_url", trip_descriptions[0], "All Seasons", "4 Stars", 1 ],
-    ["Hike High Point State Park", "img_url", trip_descriptions[1], "spring, summer, fall", "5 Stars", 2],
-    ["Kayak Double Trouble State Park", "img_url", trip_descriptions[2], "spring, summer", "3 Stars", 3],
-    ["Camp at Wawayanda State Park", "img_url", trip_descriptions[3], "summer", "5 Stars", 4],
-    ["Fish the Jersey Shore", "img_url", trip_descriptions[4], "spring, summer, fall", "3 Stars", 5],
-    ["Mountain Bike Allaire State Park", "img_url", trip_descriptions[5], "summer, spring, fall", "3 Stars", 6],
-    ["Run the Hoboken Waterfront", "img_url", trip_descriptions[6], "All Seasons", "2 Stars", 7]
+    ["Surf Island Beach State Park", trip_photos[0], trip_descriptions[0], "All Seasons", "4 Stars", 1 ],
+    ["Hike High Point State Park", trip_photos[1], trip_descriptions[1], "spring, summer, fall", "5 Stars", 2],
+    ["Kayak Double Trouble State Park", trip_photos[2], trip_descriptions[2], "spring, summer", "3 Stars", 3],
+    ["Camp at Wawayanda State Park", trip_photos[3], trip_descriptions[3], "summer", "5 Stars", 4],
+    ["Fish the Jersey Shore", trip_photos[4], trip_descriptions[4], "spring, summer, fall", "3 Stars", 5],
+    ["Mountain Bike Allaire State Park", trip_photos[5], trip_descriptions[5], "summer, spring, fall", "3 Stars", 6],
+    ["Run the Hoboken Waterfront", trip_photos[6], trip_descriptions[6], "All Seasons", "2 Stars", 7]
 ]
 
 trip_list.each do |name, img, description, season, rating, user_id|
