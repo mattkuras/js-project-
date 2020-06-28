@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user_list = [
-    ["Matt", "12345"],
-    ["Hannah", "12345"],
-    ["Lauren", "12345"],
-    ["Lou", "12345"],
-    ["Shamar", "12345"],
-    ["Sarah", "12345"],
-    ["Bryan", "12345"]
+    ["Matt", "12345", "mattk12"],
+    ["Hannah", "12345", "hd420"],
+    ["Lauren", "12345", "laurenlovescoffe"],
+    ["Lou", "12345", "lou122095"],
+    ["Shamar", "12345", "shamartian"],
+    ["Sarah", "12345", "sarahss"],
+    ["Bryan", "12345", "bgaydos"]
 ]
 
-user_list.each do |name, password|
-    User.create(name: name, password: password)
+user_list.each do |name, password, username|
+    User.create(name: name, password: password, username: username)
 end
 
 trip_descriptions = [
