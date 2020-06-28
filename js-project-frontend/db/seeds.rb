@@ -41,15 +41,15 @@ trip_descriptions = [
         ["This is a wonderful waterside run in Hoboken, with great views of the Hudson River and the Manhattan skyline. This former industrial port has transformed in recent years, with the Hudson River Waterfront Walkway connecting several green spaces, and hip bars, restaurants, and shops lining Frank Sinatra Drive and Washington St."]
 ]
 
-# trip_photos = [
-#     "https://media.nj.com/njv_paul_mulshine/photo/bay-headjpg-55c1953bc0cf707c_large.jpg",
-#     "https://media-cdn.tripadvisor.com/media/photo-s/10/71/fb/59/high-point-state-park.jpg",
-#     "https://i.pinimg.com/originals/60/15/d4/6015d4033f6f0f5f069009ee9aabcd16.jpg",
-#     "https://njmonthly.com/wp-content/uploads/cache/2017/04/DSCF2533-e1493329042770/709544912.jpg",
-#     "https://www.onthewater.com/wp-content/uploads/2016/11/peter-bertram-big-fall-bass.jpg",
-#     "https://ep1.pinkbike.org/p4pb10416265/p4pb10416265.jpg",
-#     "https://cdn.theculturetrip.com/wp-content/uploads/2018/03/waterfront-runners.jpg"
-# ]
+trip_photos = [
+    "https://cdn1.theinertia.com/wp-content/gallery/bobby-siliato-evolve/siliato_5.jpg",
+    "https://media-cdn.tripadvisor.com/media/photo-s/10/71/fb/59/high-point-state-park.jpg",
+    "https://i.pinimg.com/originals/60/15/d4/6015d4033f6f0f5f069009ee9aabcd16.jpg",
+    "https://njmonthly.com/wp-content/uploads/cache/2017/04/DSCF2533-e1493329042770/709544912.jpg",
+    "https://www.onthewater.com/wp-content/uploads/2016/11/peter-bertram-big-fall-bass.jpg",
+    "https://ep1.pinkbike.org/p4pb10416265/p4pb10416265.jpg",
+    "https://cdn.theculturetrip.com/wp-content/uploads/2018/03/waterfront-runners.jpg"
+]
 
 
 
