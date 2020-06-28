@@ -1,2 +1,32 @@
 class UsersController < ApplicationController
+
+    def new
+        if !current_user
+        @user = User.new 
+        10.times {@user.identities.build}
+        else
+            redirect_to posts_path
+        end
+    end
+
+    
+    def create
+
+        @user = User.new(user_params)
+
+        @user.identities.each do |i|
+            i.name = i.community.name 
+        end
+      #  byebug
+           if @user.save
+            
+             session[:user_id] = @user.id
+             redirect_to '/posts'
+           else
+            10.times {@user.identities.build}
+             render 'new'
+            
+           end
+    end
+
 end
