@@ -11,5 +11,35 @@ class API {
         })
     }
 
+    static addTrip(e){
+        e.preventDefault()
+        // capture our form data
+        let data = {
+            'name': e.target.name.value,
+            'description': e.target.description.value,
+            'season': e.target.season.value,
+            'rating': e.target.rating.value,
+            'photos': e.target.photos.value,
+        };
+        // write our fetch and send it to our back end
+        fetch('http://localhost:3000/trips', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        // grab our fetch response
+        .then(resp => resp.json())
+        .then(trip => {
+            const { id, name, photos, description, season, rating, user_id } = trip
+            new Trip(id, name, photos, description, season, rating, user_id)
+            // document.getElementById('trip-form').reset()
+        })
+        // create a new Hog object
+        // clear our form
+      }
+      // make sure all the functions still work
+
 
 }
