@@ -37,9 +37,9 @@ class Trip {
     header.classList.add('card-header')
     tripCard.appendChild(header)
 
-    const image = document.createElement('img')
-    image.src = `${this.img}`
-    header.appendChild(image)
+    // const image = document.createElement('img')
+    // image.src = `${this.img}`
+    // header.appendChild(image)
 
     const cardBody = document.createElement('div')
     cardBody.classList.add('card-body')
