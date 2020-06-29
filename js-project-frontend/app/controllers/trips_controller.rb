@@ -5,7 +5,6 @@ class TripsController < ApplicationController
     end
 
     def create
-
         @trip = Trip.new(trip_params)
     byebug
         if @trip.save
@@ -13,6 +12,12 @@ class TripsController < ApplicationController
         else
           render json: @trip.errors#, status: :unprocessable_entity
         end
+      end
+
+
+      def show
+        @trip = Trip.all.find(id: params[:id]) 
+        render json: @trip
       end
 
       private 
