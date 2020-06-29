@@ -1,14 +1,5 @@
 class UsersController < ApplicationController
 
-    def new
-        if !current_user
-        @user = User.new 
-        10.times {@user.identities.build}
-        else
-            redirect_to posts_path
-        end
-    end
-
     
     def create
 
@@ -28,5 +19,18 @@ class UsersController < ApplicationController
             
            end
     end
+
+       
+    private
+    
+    def user_params 
+        params.require(:user).permit(
+            :password,
+            :name,
+            :email,
+            :search
+        )
+    end
+
 
 end
