@@ -11,8 +11,17 @@ class API {
         })
     }
 
-    static addTrip(e){
-        e.preventDefault()
+    // static addTrip(){
+    //     fetch("http://localhost:3000/trips/")
+    //     .then(resp => resp.json())
+    //     .then(trip => {
+    //         trip.showTrip()
+    //     })
+    // }
+
+
+    static createTrip(e){
+          e.preventDefault()
         // capture our form data
         let data = {
             'name': e.target.name.value,
