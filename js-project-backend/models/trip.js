@@ -50,10 +50,10 @@ class Trip {
     span.classList.add('tag-pink')
     cardBody.appendChild(span)
     
-    // tripCard.addEventListener('click', e => {
-    //   if (e.target.className === 'toggle') this.greaseToggle(e)
-    //   if (e.target.className.includes('delete')) this.deleteHog(e)
-    //   if (e.target.className.includes('header')) this.showHog(e)
-    // })
+    tripCard.addEventListener('click', e => {
+
+      if (e.target.className.includes('delete')) this.deleteTrip(e)
+      if (e.target.className.includes('header')) this.showTrip(e)
+    })
   }
 }
