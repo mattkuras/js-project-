@@ -16,8 +16,14 @@ class TripsController < ApplicationController
 
 
       def show
-        @trip = Trip.all.find(id: params[:id]) 
+        @trip = Trip.all.find_by(id: params[:id]) 
         render json: @trip
+      end
+
+
+      def destroy
+        @trip = Trip.all.find_by(id: params[:id])
+        @trip.destroy
       end
 
       private 
