@@ -22,6 +22,25 @@ class Trip {
         `
       }
 
+      deleteTrip(e){
+        const id = parseInt(e.target.parentElement.parentElement.id)
+        fetch(`http://localhost:3000/trips/${id}`,{
+          method: 'DELETE'
+        })
+        .then(() => {
+          document.getElementById('container').removeChild(document.getElementById(id))
+        })
+      }
+
+      showTrip(e){
+        e.preventDefault()
+        const container = document.getElementById('container')
+        container.innerHTML = ""
+
+        this.renderTrip()
+
+      }
+     
 
  // render all our hogs to the page
  renderTrip (){
@@ -49,11 +68,18 @@ class Trip {
     span.classList.add('tag')
     span.classList.add('tag-pink')
     cardBody.appendChild(span)
-    
-    tripCard.addEventListener('click', e => {
 
-      if (e.target.className.includes('delete')) this.deleteTrip(e)
-      if (e.target.className.includes('header')) this.showTrip(e)
-    })
+    
+    
+     tripCard.addEventListener('click', e => {
+    
+    //   e.preventDefault()
+    //   // console.log(e.target.innerHTML)
+        if (e.target.className.includes('delete')) this.deleteTrip(e);
+          if (e.target.className.includes('header')); this.showTrip(e)
+      
+     })
   }
+
+  
 }
