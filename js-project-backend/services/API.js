@@ -43,12 +43,34 @@ class API {
         .then(trip => {
             const { id, name, photos, description, season, rating, user_id } = trip
             new Trip(id, name, photos, description, season, rating, user_id)
-            // document.getElementById('trip-form').reset()
+            document.getElementById('trip-form').reset()
         })
-        // create a new Hog object
+        // create a new Trip object
         // clear our form
       }
       // make sure all the functions still work
 
+      static createUser(e){
+          e.preventDefault()
+          let data = {
+              'name': e.target.name.value, 
+              'username': e.target.username.value, 
+              'password': e.target.password.value
+          };
 
+          fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+    
+        })
+        
+        .then(resp => resp.json())
+        .then(user => {
+            const { name, username, password } = user
+            new User (name, username, password)
+      }) 
+    }
 }
