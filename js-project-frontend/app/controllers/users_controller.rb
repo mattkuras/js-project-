@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
         @user = User.new(user_params)
 
-      #  byebug
+
            if @user.save
             
              session[:user_id] = @user.id
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         params.require(:user).permit(
             :password,
             :name,
-            :email,
+            :username,
             :search
         )
     end
