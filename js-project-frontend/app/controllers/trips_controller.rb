@@ -5,8 +5,9 @@ class TripsController < ApplicationController
     end
 
     def create
-        @trip = Trip.new(trip_params)
-    byebug
+      current_user = User.all[0]
+        @trip = current_user.trips.build(trip_params)
+
         if @trip.save
           render json: @trip#, status: :created, location: @trip
         else
