@@ -22,8 +22,24 @@ class Trip {
         `
       }
 
+      // searchTrips(e){
+      //   console.log(e)
+      //   e.preventDefault()
+      //   document.getElementById("card").innerHTML = ""
+      //   fetch("http://localhost:3000/trips")
+      //   .then(resp => resp.json())
+      //   .then(trips => {
+      //     trips.forEach(trip => {
+      //         const { id, name, photos, description, season, rating, user_id } = trip
+      //         new Trip(id, name, photos, description, season, rating, user_id)
+      //     })
+      // })
+      // }
+
       deleteTrip(e){
-        const id = parseInt(e.target.parentElement.parentElement.id)
+        console.log("deleted")
+        const id = parseInt(this.id)
+      
         fetch(`http://localhost:3000/trips/${id}`,{
           method: 'DELETE'
         })
@@ -33,13 +49,19 @@ class Trip {
       }
 
       showTrip(e){
-        e.preventDefault()
-        const container = document.getElementById('container')
-        container.innerHTML = ""
-
-        this.renderTrip()
-
+       
+        console.log("show trip")
+        document.getElementById("container").innerHTML = ""
+        const id = parseInt(this.id)
+        fetch(`http://localhost:3000/trips/${id}`)
+        .then(resp => resp.json())
+        .then(trip => {
+          
+              const { id, name, photos, description, season, rating, user_id } = trip
+              new Trip(id, name, photos, description, season, rating, user_id)
+          })
       }
+    
      
 
  // render all our hogs to the page
@@ -72,14 +94,15 @@ class Trip {
     
     
      tripCard.addEventListener('click', e => {
-    
-    //   e.preventDefault()
-    //   // console.log(e.target.innerHTML)
-        if (e.target.className.includes('delete')) this.deleteTrip(e);
-          if (e.target.className.includes('header')); this.showTrip(e)
-      
+       e.preventDefault()
+      console.log(e.target.className)
+
+        if (e.target.className.includes('delete')) this.deleteTrip(e)
+        if (e.target.className.includes('header')) this.showTrip(e)
+        
      })
-  }
+  
+    }
 
   
 }

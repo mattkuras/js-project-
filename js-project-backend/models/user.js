@@ -10,6 +10,13 @@ class User {
         const container = document.getElementById('container')
 
         const form = document.createElement('form')
+        form.classList.add("hide")
+        const label = document.createElement('h2')
+        label.innerText = "sign up!"
+        container.appendChild(label)
+        label.addEventListener("click", () => {
+            form.classList.remove("hide")
+        })
         form.id = "user-form"
         container.appendChild(form)
         const inputName = document.createElement('input')
@@ -36,4 +43,6 @@ class User {
         form.appendChild(subButton)
     }
 
+
 }
+

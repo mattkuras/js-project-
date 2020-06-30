@@ -56,21 +56,24 @@ class API {
               'name': e.target.name.value, 
               'username': e.target.username.value, 
               'password': e.target.password.value
-          };
-
+          }
+          
           fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-    
         })
-        
+         
+        // grab our fetch response
         .then(resp => resp.json())
         .then(user => {
-            const { name, username, password } = user
-            new User (name, username, password)
-      }) 
-    }
+            const {name, username, password, id } = user
+            new User(name, username, password, id)
+            document.getElementById('user-form').reset()
+        })
+        // create a new Hog object
+        // clear our form
+      }
 }
