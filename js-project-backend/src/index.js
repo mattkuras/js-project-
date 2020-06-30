@@ -6,7 +6,10 @@
 document.addEventListener("DOMContentLoaded",function(){
   // call our new function in there 
   API.addTrips()
+  User.renderForm()
+  document.getElementById('user-form').addEventListener('submit', API.createUser)
   document.getElementById('trip-form').addEventListener('submit', API.createTrip)
+ 
   // add the form event listener to the domContentLoaded
  // document.getElementById('form').addEventListener('submit', API.addHog)
 })
