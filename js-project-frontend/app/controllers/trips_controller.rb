@@ -11,8 +11,9 @@ class TripsController < ApplicationController
     def create
       
         @trip = Trip.create(trip_params)
-
+     
         if @trip.save
+          
           render json: @trip
         else
           render json: @trip.errors
