@@ -11,7 +11,9 @@ class User {
         return `
         <p id="user-trips">${this.name}'s created trips </p>
         <p>name: ${this.name}</p>
-        <p>username: ${this.username}</p>`
+        <p>username: ${this.username}</p>
+        <p id="users-id">${this.id}`  
+
         document.getElementById("user-trips").addEventListener('click', )
     }
 
@@ -20,6 +22,9 @@ class User {
         const userCard = document.createElement("div")
         userCard.innerHTML += this.userHTML ()
         userContainer.appendChild(userCard)
+        Trip.renderTripForm()
+        document.getElementById('trip-form').addEventListener('submit', API.createTrip)
+
     }
 
     static renderForm(){
