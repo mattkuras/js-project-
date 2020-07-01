@@ -18,7 +18,9 @@ require "rails/test_unit/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
+# config.session_store :cookie_store, key: '_interslice_session' # <-- this also configures session_options for use below
+# config.middleware.use ActionDispatch::Cookies # Required for all session management (regardless of session_store)
+# config.middleware.use config.session_store, config.session_options
 module JsProjectFrontend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

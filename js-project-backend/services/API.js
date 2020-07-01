@@ -71,6 +71,7 @@ class API {
         .then(user => {
             const {name, username, password, id } = user
             new User(name, username, password, id)
+            
             document.getElementById('user-form').reset()
         })
         // create a new Hog object

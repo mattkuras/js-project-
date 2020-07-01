@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all  
-        render json: @users
+        render json: @users, include: [:trips]
     end
 
     def create
@@ -10,9 +10,9 @@ class UsersController < ApplicationController
         
            if @user.save
          session[:user_id] = @user.id
-         render json: @user
+         render json: @user, include: [:trips]
            end
-           byebug
+           
     end
 
        

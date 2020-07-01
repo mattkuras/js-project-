@@ -1,9 +1,25 @@
 class User {
-    constructor (id, name, username, password){
-        this.id = id 
-        this.name = name
-        this.username = username
-        this.password = password 
+    constructor (name, username, password, id){
+       this.name = name
+       this.username = username
+       this.password = password
+       this.id = id 
+       this.renderUser()
+    }
+
+    userHTML(){
+        return `
+        <p id="user-trips">${this.name}'s created trips </p>
+        <p>name: ${this.name}</p>
+        <p>username: ${this.username}</p>`
+        document.getElementById("user-trips").addEventListener('click', )
+    }
+
+    renderUser(){
+        const userContainer = document.getElementById("user-container")
+        const userCard = document.createElement("div")
+        userCard.innerHTML += this.userHTML ()
+        userContainer.appendChild(userCard)
     }
 
     static renderForm(){
