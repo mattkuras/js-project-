@@ -44,7 +44,6 @@ class Trip {
         label.innerText = "Make a new trip!!"
         container.appendChild(label)
         label.addEventListener("click", () => {
-          console.log("clicked")
             tripForm.classList.remove("hide")
         })
         tripForm.id = "trip-form"
@@ -153,11 +152,8 @@ class Trip {
     span.classList.add('tag-pink')
     cardBody.appendChild(span)
 
-    
-    
      tripCard.addEventListener('click', e => {
        e.preventDefault()
-      console.log(e.target.className)
 
         if (e.target.className.includes('delete')) this.deleteTrip(e)
         if (e.target.className.includes('header')) this.showTrip(e)

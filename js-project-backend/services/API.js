@@ -29,6 +29,7 @@ class API {
             'season': e.target.season.value,
             'rating': e.target.rating.value,
             'photos': e.target.photos.value,
+            'user_id': e.target.user_id.value
         };
         // write our fetch and send it to our back end
         fetch('http://localhost:3000/trips', {
@@ -74,7 +75,7 @@ class API {
             
             document.getElementById('user-form').reset()
         })
-        // create a new Hog object
+        // create a new trip object
         // clear our form
       }
       
