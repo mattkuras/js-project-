@@ -10,7 +10,7 @@ class TripsController < ApplicationController
 
     def create
       
-        @trip = current_user.trips.build(trip_params)
+        @trip = Trip.create(trip_params)
 
         if @trip.save
           render json: @trip
