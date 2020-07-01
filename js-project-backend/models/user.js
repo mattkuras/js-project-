@@ -33,7 +33,7 @@ class User {
         const form = document.createElement('form')
         form.classList.add("hide")
         const label = document.createElement('h2')
-        label.innerText = "sign up!"
+        label.innerText = "Log In!"
         container.appendChild(label)
         label.addEventListener("click", () => {
             form.classList.remove("hide")
