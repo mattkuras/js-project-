@@ -89,6 +89,7 @@ class Trip {
         userId.name = "user_id"
         const requiredId = document.getElementById("users-id").innerHTML
         userId.value = requiredId
+        userId.placeholder = "your id here"
         tripForm.appendChild(userId)
 
         const subButton = document.createElement("input")

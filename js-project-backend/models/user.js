@@ -12,7 +12,7 @@ class User {
         <p id="user-trips">${this.name}'s created trips </p>
         <p>name: ${this.name}</p>
         <p>username: ${this.username}</p>
-        <p id="users-id">${this.id}`  
+        <p id="users-id">id:${this.id}`  
 
         document.getElementById("user-trips").addEventListener('click', )
     }
@@ -28,6 +28,7 @@ class User {
     }
 
     static renderForm(){
+        
         const container = document.getElementById('container')
 
         const form = document.createElement('form')
@@ -62,6 +63,9 @@ class User {
         subButton.type = "submit"
         subButton.value = "Submit"
         form.appendChild(subButton)
+        subButton.addEventListener("click", () => {
+            form.classList.add("hide")
+        })
     }
 
 
