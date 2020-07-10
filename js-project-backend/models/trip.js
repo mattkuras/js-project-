@@ -88,6 +88,7 @@ class Trip {
         userId.type = "text"
         userId.name = "user_id"
         const requiredId = document.getElementById("users-id").innerHTML
+
         userId.value = requiredId
         userId.placeholder = "your id here"
         tripForm.appendChild(userId)
@@ -152,6 +153,17 @@ class Trip {
     span.classList.add('tag')
     span.classList.add('tag-pink')
     cardBody.appendChild(span)
+
+    const likeButton = document.createElement('button')
+    likeButton.classList.add('lButton') 
+    likeButton.innerText = "0"
+    likeButton.addEventListener("click", function(e) {
+
+      let count = parseInt(e.target.innerText)
+        let newCount = count + 1 
+        likeButton.innerText = newCount
+    })
+    cardBody.appendChild(likeButton)
 
      tripCard.addEventListener('click', e => {
        e.preventDefault()
